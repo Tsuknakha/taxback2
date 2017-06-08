@@ -6,12 +6,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 /**
  * Created by Administrator on 6/8/2017.
  */
-
 @Controller
-public class HelloWorldController {
+public class IndexController {
 
     @RequestMapping("/")
-    public String sayHello() {
+    public String home() {
         return "index";
     }
 }
