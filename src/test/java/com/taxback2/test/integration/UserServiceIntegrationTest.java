@@ -7,7 +7,7 @@ import com.taxback2.backend.persistence.domain.backend.UserRole;
 import com.taxback2.backend.service.UserService;
 import com.taxback2.enums.PlansEnum;
 import com.taxback2.enums.RolesEnum;
-import com.taxback2.utils.UsersUtils;
+import com.taxback2.utils.UserUtils;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -31,7 +31,7 @@ public class UserServiceIntegrationTest {
     public void testCreateNewUser() throws Exception {
 
         Set<UserRole> userRoles = new HashSet<>();
-        User basicUser = UsersUtils.createBasicUser();
+        User basicUser = UserUtils.createBasicUser();
         userRoles.add(new UserRole(basicUser, new Role(RolesEnum.BASIC)));
 
         User user = userService.createUser(basicUser, PlansEnum.BASIC, userRoles);

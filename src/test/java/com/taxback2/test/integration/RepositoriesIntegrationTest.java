@@ -8,7 +8,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * Created by Administrator on 6/14/2017.
  */
 
-import com.taxback2.Taxback2Application;
 import com.taxback2.backend.persistence.domain.backend.Plan;
 import com.taxback2.backend.persistence.domain.backend.Role;
 import com.taxback2.backend.persistence.domain.backend.User;
@@ -18,14 +17,12 @@ import com.taxback2.backend.persistence.repositories.RoleRepository;
 import com.taxback2.backend.persistence.repositories.UserRepository;
 import com.taxback2.enums.PlansEnum;
 import com.taxback2.enums.RolesEnum;
-import com.taxback2.utils.UsersUtils;
+import com.taxback2.utils.UserUtils;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -77,7 +74,7 @@ public class RepositoriesIntegrationTest {
         Plan basicPlan = createPlan(PlansEnum.BASIC);
         planRepository.save(basicPlan);
 
-        User basicUser = UsersUtils.createBasicUser();
+        User basicUser = UserUtils.createBasicUser();
         basicUser.setPlan(basicPlan);
 
         Role basicRole = createRole(RolesEnum.BASIC);

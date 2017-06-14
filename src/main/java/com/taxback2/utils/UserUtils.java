@@ -4,12 +4,12 @@ import com.taxback2.backend.persistence.domain.backend.User;
 /**
  * Created by Administrator on 6/14/2017.
  */
-public class UsersUtils {
+public class UserUtils {
 
     /**
      * Non instantiable.
      */
-    private UsersUtils() {
+    private UserUtils() {
         throw new AssertionError("Non instantiable");
     }
 
